@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width">
+		<title>Persian Prime</title>
+		<link rel="stylesheet" type="text/css" href="static/style.css">
+		
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+		
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="static/favicon/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/favicon/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/favicon/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/favicon/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="static/favicon/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="static/favicon/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="static/favicon/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="static/favicon/apple-touch-icon-152x152.png" />
+		<link rel="icon" type="image/png" href="static/favicon/favicon-196x196.png" sizes="196x196" />
+		<link rel="icon" type="image/png" href="static/favicon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="static/favicon/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="static/favicon/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="static/favicon/favicon-128.png" sizes="128x128" />
+	</head>
+	<body>
+		<header>
+			<center><h3><a href="/" style="font-family: 'Ubuntu';">Persian Prime</a></h3></center>
+		</header>
+		
+		<div id="hero">
+			{{#if image}}
+				<img src="{{image}}" width=300>
+			{{/if}}
+			<h2 style="font-family: 'Ubuntu'; font-weight: 400;">{{title}}</h2>
+			<p style="font-family: 'Ubuntu'">{{description}}</p>
+			{{#each files}}
+				<a href="{{this.link}}" class="link button">
+					<i class="mdi mdi-download"></i> {{this.title}}
+				</a>
+			{{/each}}
+		</div>
+	</body>
+</html>
